@@ -4,15 +4,16 @@
 
 ## About Me
 
--  Currently working on **[Your Current Project]**
+
 -  Learning **Probability Systems**
 -  Ask me about **Maths**
 -  Reach me at **har1001sha@gmail.com**
--  Fun fa
+
 
 ---
 
-## Tech Stack
+## Languages
+
 
 ![C++](https://img.shields.io/badge/C++-000000?style=flat&logo=cplusplus&logoColor=white)
 ![C](https://img.shields.io/badge/C-000000?style=flat&logo=c&logoColor=white)
