@@ -20,13 +20,7 @@
 ![Python](https://img.shields.io/badge/Python-000000?style=flat&logo=python&logoColor=white)
 
 ---
-## GitHub Stats
-<p align="left">
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=noxcenary&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="150" />
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=noxcenary&layout=compact&theme=tokyonight&hide_border=true" height="150" />
-</p>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=noxcenary&theme=tokyo-night&hide_border=true" width="100%" />
 
 
 
