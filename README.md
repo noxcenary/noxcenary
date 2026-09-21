@@ -60,10 +60,8 @@
   </picture>
 </p>
 
-<!--
-Optional: contribution snake (needs the workflow in snake.yml, saved as
-.github/workflows/snake.yml in your noxcenary/noxcenary repo).
-Uncomment after the workflow has run once.
+
+
 
 <p align="center">
   <picture>
@@ -71,4 +69,4 @@ Uncomment after the workflow has run once.
     <img src="https://raw.githubusercontent.com/noxcenary/noxcenary/output/github-snake.svg" alt="Contribution snake">
   </picture>
 </p>
--->
+
