@@ -23,14 +23,18 @@ jobs:
 
       - name: Generate frog-snake SVGs
         env:
-          # The default GITHUB_TOKEN can usually read a *public* contribution
-          # graph for the repo owner. If this workflow fails with a GraphQL
-          # permission error, create a classic PAT with the `read:user`
-          # scope, save it as a repo secret (e.g. SNAKE_TOKEN), and swap
-          # the line below for: GITHUB_TOKEN: ${{ secrets.SNAKE_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # contributionsCollection needs a token scoped to read the user,
+          # which the default GITHUB_TOKEN usually does NOT have. Create a
+          # classic PAT with the `read:user` scope, save it as a repo
+          # secret named SNAKE_TOKEN, and this will pick it up.
+          GITHUB_TOKEN: ${{ secrets.SNAKE_TOKEN }}
           GITHUB_LOGIN: ${{ github.repository_owner }}
         run: node generate-frog-snake.mjs
+
+      - name: Clean stale output files
+        run: |
+          mkdir -p dist
+          find dist -maxdepth 1 -type f ! -name 'github-snake.svg' ! -name 'github-snake-dark.svg' -delete
 
       - uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
