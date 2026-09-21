@@ -15,12 +15,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: Platane/snk/svg-only@v3
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg?color_snake=#0284c7&color_dots=#ebedf0,#bae6fd,#7dd3fc,#38bdf8,#0284c7
-            dist/github-snake-dark.svg?color_snake=#0ea5e9&color_dots=#161b22,#0c4a6e,#075985,#0284c7,#38bdf8
+          node-version: 20
+
+      - name: Generate frog-snake SVGs
+        env:
+          # The default GITHUB_TOKEN can usually read a *public* contribution
+          # graph for the repo owner. If this workflow fails with a GraphQL
+          # permission error, create a classic PAT with the `read:user`
+          # scope, save it as a repo secret (e.g. SNAKE_TOKEN), and swap
+          # the line below for: GITHUB_TOKEN: ${{ secrets.SNAKE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_LOGIN: ${{ github.repository_owner }}
+        run: node generate-frog-snake.mjs
 
       - uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
