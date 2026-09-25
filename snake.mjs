@@ -1,6 +1,9 @@
 import fs from "node:fs";
 import sharp from "sharp";
-import { GIFEncoder, quantize, applyPalette } from "gifenc";
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+const { GIFEncoder, quantize, applyPalette } = require("gifenc");
 
 const USER = process.env.GITHUB_USER || "noxcenary";
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -274,9 +277,7 @@ async function main() {
       .raw()
       .toBuffer({ resolveWithObject: true });
 
-    const index = applyPalette(data, palette, {
-      format: "rgba4444"
-    });
+    const index = applyPalette(data, palette, "rgb444");
 
     encoder.writeFrame(index, info.width, info.height, {
       palette,
