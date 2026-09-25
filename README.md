@@ -58,9 +58,15 @@ C++ · C · Python · Git
 </p>
 
 <p align="right">
-  <a href="https://linkedin.com/in/shriharshangowda"><img src="https://cdn.simpleicons.org/linkedin/d9d9d9" width="24" alt="LinkedIn"></a>
+  <a href="https://linkedin.com/in/shriharshangowda">
+    <img src="https://cdn.simpleicons.org/linkedin/d9d9d9" width="24" alt="LinkedIn">
+  </a>
   &nbsp;&nbsp;
-  <a href="https://twitter.com/Shr1harsha"><img src="https://cdn.simpleicons.org/x/d9d9d9" width="24" alt="X"></a>
+  <a href="https://twitter.com/Shr1harsha">
+    <img src="https://cdn.simpleicons.org/x/d9d9d9" width="24" alt="X">
+  </a>
   &nbsp;&nbsp;
-  <a href="mailto:har1001sha@gmail.com"><img src="https://cdn.simpleicons.org/gmail/d9d9d9" width="24" alt="Email"></a>
+  <a href="mailto:har1001sha@gmail.com">
+    <img src="https://cdn.simpleicons.org/gmail/d9d9d9" width="24" alt="Email">
+  </a>
 </p>
