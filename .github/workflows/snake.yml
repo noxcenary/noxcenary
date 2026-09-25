@@ -14,19 +14,20 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+
     steps:
-      # Full action (not svg-only) - GIF rendering needs the Docker build,
-      # which is why this one takes longer and needs GITHUB_TOKEN passed
-      # explicitly on the step itself.
-      - uses: Platane/snk@v3
+      - name: Generate Snake
+        uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-snake.gif?color_snake=#ffffff&color_dots=#000000,#666666,#a0a0a0,#d9d9d9,#ffffff&color_background=#000000
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Publish
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
