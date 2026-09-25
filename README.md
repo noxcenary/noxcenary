@@ -77,8 +77,7 @@ Probability · Mathematics · Algorithms · Systems
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/noxcenary/noxcenary/output/github-snake.gif?v=2"
+  <img src="https://raw.githubusercontent.com/noxcenary/noxcenary/output/github-snake.gif?v=3"
        width="100%"
-       alt="Pac-Man eating GitHub contributions">
+       alt="Snake eating GitHub contributions">
 </p>
-
