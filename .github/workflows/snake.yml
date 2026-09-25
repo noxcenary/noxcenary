@@ -14,18 +14,29 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
-      - name: Generate Snake
-        uses: Platane/snk@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          github_user_name: noxcenary
-          outputs: |
-            dist/github-snake.gif?color_snake=#ffffff&color_dots=#000000,#666666,#a0a0a0,#d9d9d9,#ffffff&color_background=#000000
+          node-version: 20
+
+      - name: Install renderer
+        run: |
+          npm init -y
+          npm install sharp gifenc
+
+      - name: Generate custom contribution snake
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: noxcenary
+        run: node snake.mjs
 
-      - name: Publish Snake
+      - name: Publish GIF
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
