@@ -75,5 +75,11 @@ Probability · Mathematics · Algorithms · Systems
     <img src="https://img.icons8.com/ios-filled/50/FFFFFF/gmail.png" width="24" alt="Email">
   </a>
 </p>
-<picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/noxcenary/noxcenary/output/github-snake-dark.svg"> <img src="https://raw.githubusercontent.com/noxcenary/noxcenary/output/github-snake.svg" alt="Contribution snake"> </picture>
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/noxcenary/noxcenary/output/github-snake.gif"
+    width="100%"
+    alt="Snake eating my GitHub contributions"
+  >
+</p>
 
