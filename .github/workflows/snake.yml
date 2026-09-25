@@ -27,7 +27,7 @@ jobs:
           # Keep using the existing SNAKE_TOKEN secret so no new secret is required.
           GITHUB_TOKEN: ${{ secrets.SNAKE_TOKEN }}
           GITHUB_LOGIN: ${{ github.repository_owner }}
-        run: node generate-frog-snake-pacman.mjs
+        run: node pacman-contribution.mjs
 
       - name: Clean stale output files
         run: |
