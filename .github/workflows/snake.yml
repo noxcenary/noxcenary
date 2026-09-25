@@ -31,7 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SNAKE_TOKEN }}
           GITHUB_LOGIN: ${{ github.repository_owner }}
           FRAMES: 240
-        run: node pacman-contribution.mjs
+        run: node generate-snake-contribution.mjs
 
       - name: Render frames to PNG
         run: |
