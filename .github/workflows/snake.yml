@@ -15,44 +15,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      # Full action (not svg-only) - GIF rendering needs the Docker build,
+      # which is why this one takes longer and needs GITHUB_TOKEN passed
+      # explicitly on the step itself.
+      - uses: Platane/snk@v3
         with:
-          node-version: 20
-
-      - name: Install image tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y librsvg2-bin ffmpeg
-
-      - name: Generate contribution snake frames
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.gif?color_snake=#ffffff&color_dots=#000000,#666666,#a0a0a0,#d9d9d9,#ffffff&color_background=#000000
         env:
-          GITHUB_TOKEN: ${{ secrets.SNAKE_TOKEN }}
-          GITHUB_LOGIN: ${{ github.repository_owner }}
-          FRAMES: 240
-        run: node generate-snake-contribution.mjs
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Render frames to PNG
-        run: |
-          mkdir -p dist/png
-          for f in dist/snake-frames/*.svg; do
-            base=$(basename "$f" .svg)
-            rsvg-convert -w 795 -o "dist/png/${base}.png" "$f"
-          done
-
-      - name: Encode animated GIF
-        run: |
-          ffmpeg -y -framerate 20 -i dist/png/frame-%03d.png \
-            -vf "fps=20,split[s0][s1];[s0]palettegen=max_colors=128:stats_mode=diff[p];[s1][p]paletteuse=dither=sierra2_4a" \
-            -loop 0 dist/github-snake.gif
-          cp dist/github-snake.gif dist/github-snake-dark.gif
-
-      - name: Clean temporary files
-        run: rm -rf dist/snake-frames dist/png
-
-      - name: Publish output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
