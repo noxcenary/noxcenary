@@ -10,8 +10,7 @@
 
 ### ABOUT
 
-I’m a computer science student interested in **probability, mathematics, algorithms and systems**. I enjoy understanding how things work, then turning that understanding into models.
-
+Learning...
 
 
 <h3>INTERESTS</h3>
