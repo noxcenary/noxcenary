@@ -15,7 +15,7 @@ Learning...
 
 <h3>INTERESTS</h3>
 
-Probability · Mathematics · Algorithms · Systems 
+· Mathematics · Algorithms · Systems 
 
 
 
