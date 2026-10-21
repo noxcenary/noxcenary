@@ -12,15 +12,15 @@
 
 Learning...
 
+### INTERESTS
 
-<h3>INTERESTS</h3>
+· Mathematics<br>
+· Algorithms<br>
+· Systems
 
-· Mathematics
-· Algorithms
-· Systems 
+<img src="assets/spacer.svg" width="1000" height="1" alt="">
 
-
-
+</td>
 <td width="50%" valign="top">
 
 ### STACK
@@ -38,6 +38,7 @@ Learning...
   <img src="https://img.icons8.com/ios-filled/50/FFFFFF/java-coffee-cup-logo.png" width="42" alt="Java">
 </p>
 
+<img src="assets/spacer.svg" width="1000" height="1" alt="">
 
 </td>
 </tr>
@@ -50,9 +51,9 @@ Learning...
 <p align="center">
   <a href="https://github.com/noxcenary?tab=repositories">
     <img src="https://api.iconify.design/octicon:repo-16.svg?color=%23FFFFFF" width="18" alt="Repositories">
-    &nbsp;<b>Repositories</b>
+    &nbsp;
   </a>
-  &nbsp;·&nbsp;
+  &nbsp;&nbsp;
 </p>
 
 <p align="center">
