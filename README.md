@@ -76,9 +76,9 @@ Learning...
 </p>
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/noxcenary/noxcenary/output/github-snake.gif"
+    src="https://raw.githubusercontent.com/noxcenary/noxcenary/output/github-snake.svg"
     width="100%"
     alt="Snake eating GitHub contributions"
   >
 </p>
-
+<!-- <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/noxcenary/noxcenary/output/github-snake.svg" /> -->
