@@ -15,7 +15,9 @@ Learning...
 
 <h3>INTERESTS</h3>
 
-· Mathematics · Algorithms · Systems 
+· Mathematics
+· Algorithms
+· Systems 
 
 
 
