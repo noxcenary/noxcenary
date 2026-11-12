@@ -36,6 +36,8 @@ Learning...
   <img src="https://cdn.simpleicons.org/cplusplus/d9d9d9" width="42" alt="C++">&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/python/d9d9d9" width="42" alt="Python">&nbsp;&nbsp;&nbsp;
   <img src="https://img.icons8.com/ios-filled/50/FFFFFF/java-coffee-cup-logo.png" width="42" alt="Java">
+  <img src="https://img.icons8.com/ios-filled/50/FFFFFF/java-coffee-cup-logo.png" width="42" alt="Java">&nbsp;&nbsp;&nbsp;
+  <img src="assets/mysql.svg" width="42" alt="MySQL">
 </p>
 
 <img src="assets/spacer.svg" width="1000" height="1" alt="">
